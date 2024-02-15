@@ -1,0 +1,112 @@
+ .order_summary {
+    color: var(--gray);
+    padding: var(--size5) var(--size1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--size7);
+  }
+  
+  .order_summary.less {
+    padding-bottom: 10rem;
+  }
+  
+  .order_summary table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  .order_summary table th {
+    font-size: 1.3rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--blue1);
+    color: white;
+  }
+  
+  .order_summary table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    padding: var(--size1) 0;
+    margin: var(--size1) 0;
+  }
+  
+  .order_summary table tbody tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  .order_summary table td,
+  .order_summary table th {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: center;
+  }
+  
+  .order_summary .order_section {
+    display: none;
+  }
+  
+  .order_summary .order_section table {
+    display: none;
+  }
+  
+  @media screen and (max-width: 48rem) {
+    .order_summary h1 {
+      text-align: center;
+    }
+    .order_summary table {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 31.25rem) {
+    .order_summary {
+      padding: var(--size5) 0;
+    }
+  }
+  
+  @media screen and (max-width: 25rem) {
+    .order_summary {
+      padding: var(--size5) 0;
+    }
+    .order_summary table {
+      display: none;
+    }
+  
+    .order_summary .order_section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--size3);
+    }
+  
+    .order_summary .order_section .order_tables {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--size1);
+      padding: 0;
+    }
+  
+    .order_summary .order_section table {
+      width: 100%;
+      display: block;
+    }
+  
+    .order_summary .order_section table tr,
+    td {
+      width: 100%;
+    }
+  
+    .order_summary .order_section table td {
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+  }
+  

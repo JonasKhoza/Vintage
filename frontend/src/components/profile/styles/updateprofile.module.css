@@ -1,0 +1,27 @@
+ .profile_update form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: var(--size8);
+  }
+  
+  .profile_update form label {
+    font-size: 1.3rem;
+  }
+  
+  .profile_update form button {
+    background-color: var(--blue1);
+    color: var(--gray);
+    grid-column: 1 / 3;
+    padding: var(--favorite) 0;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 62.5rem) {
+    .profile_update form {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+  

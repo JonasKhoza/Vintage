@@ -1,0 +1,67 @@
+ .order_history table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .order_history table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    padding: var(--size1) 0;
+    margin: var(--size1) 0;
+  }
+  
+  .order_history table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .order_history table td,
+  .order_history table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .order_history table th {
+    font-size: 1.3rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--blue1);
+    color: white;
+  }
+  
+  .order_history table td a:hover {
+    color: darkorange;
+  }
+  
+  .order_history .order_history_table table {
+    display: none;
+  }
+  
+  @media screen and (max-width: 37.5rem) {
+    .order_history table {
+      display: none;
+    }
+  
+    .order_history .order_history_table {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--size3);
+    }
+  
+    .order_history .order_history_table table {
+      width: 100%;
+      display: block;
+    }
+  
+    .order_history .order_history_table table tr,
+    td {
+      width: 100%;
+    }
+  
+    .order_history .order_history_table table td {
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+  }
+  

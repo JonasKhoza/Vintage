@@ -1,0 +1,118 @@
+ .all_specials header {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10rem;
+    background: linear-gradient(
+      to right,
+      var(--blue3),
+      var(--blue2),
+      var(--blue1)
+    );
+    padding: 0;
+  }
+  
+  .all_specials header h1 {
+    font-weight: bolder;
+    font-size: var(--size7);
+  }
+  .all_specials header p {
+    font-weight: 600;
+    font-size: var(--size3);
+    color: var(--pink3);
+    padding: var(--size1);
+  }
+  .all_specials .products_grid {
+    width: 80%;
+    margin: 3rem auto 0 auto;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(14.5rem, 1fr));
+    justify-items: center;
+    gap: var(--size3);
+    list-style: none;
+  }
+  
+  .all_specials .product_details {
+    width: 14.5rem;
+    height: 28rem;
+    border-radius: 5px;
+    background-color: transparent;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: var(--size1);
+    border: 1px solid var(--third-gray);
+  }
+  
+  .all_specials img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border: none;
+  }
+  
+  .all_specials .product_item_content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size1);
+    border-top: 1px solid var(--third-gray);
+    cursor: default;
+  }
+  .all_specials .product_item_content h1 {
+    height: 6rem;
+    font-size: var(--favorite);
+  }
+  .all_specials .product_item_content .special_price {
+    text-decoration: line-through;
+  }
+  @media screen and (max-width: 91.875rem) {
+    .all_specials .products_grid {
+      width: 80%;
+      grid-template-columns: repeat(4, minmax(14.5rem, 1fr));
+      gap: var(--size3);
+    }
+  }
+  
+  @media screen and (max-width: 73.125rem) {
+    .all_specials .products_grid {
+      width: 95%;
+      grid-template-columns: repeat(3, minmax(14.5rem, 1fr));
+      gap: var(--size1);
+    }
+  }
+  
+  @media screen and (max-width: 48rem) {
+    .all_specials header {
+      gap: 0;
+      padding-bottom: var(--size1);
+      padding-left: var(--size);
+      padding-top: var(--size);
+      height: 12rem;
+    }
+    .all_specials header h1 {
+      font-weight: 600;
+      font-size: var(--size5);
+      text-align: center;
+    }
+    .all_specials header p {
+      font-size: var(--favorite);
+    }
+  
+    .all_specials .products_grid {
+      width: 85%;
+      grid-template-columns: repeat(2, minmax(14.5rem, 1fr));
+    }
+  }
+  
+  @media screen and (max-width: 33.75rem) {
+    .all_specials header h1 {
+      text-align: center;
+    }
+    .all_specials .products_grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

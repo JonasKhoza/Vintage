@@ -1,0 +1,104 @@
+ .not_found {
+    color: rgb(23, 23, 99);
+    padding: var(--size2) 0 var(--size-4) 0;
+    padding-bottom: var(--size-4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .not_found h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14rem;
+    color: rgb(236, 76, 76);
+  }
+  
+  .not_found h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 4rem;
+  }
+  
+  .redirect_button {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .home_link {
+    color: rgb(141, 141, 141);
+    text-decoration: none;
+    padding: 0 0.5rem;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  
+  .home_link:hover {
+    color: blueviolet;
+  }
+  
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1_5);
+  }
+  
+  .contentContainer p {
+    font-size: var(--size-1_5);
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+  }
+  
+  .ourFriendsNames {
+    text-align: center;
+  }
+  
+  img {
+    width: 32rem;
+    height: 22rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .not_found h1 {
+      font-size: 8rem;
+    }
+  
+    .not_found h2 {
+      font-size: 2.5rem;
+    }
+  
+    .redirect_button {
+      font-size: 1.5rem;
+    }
+  
+    .home_link {
+      font-size: 1.8rem;
+    }
+  
+    img {
+      width: 25rem;
+      height: 18rem;
+      object-fit: cover;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .not_found h1 {
+      font-size: 6rem;
+    }
+    img {
+      width: 16rem;
+      height: 14rem;
+    }
+    .contentContainer p {
+      font-size: var(--favorite-size-1);
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,127 @@
+footer {
+  background-color: var(--blue3);
+  color: var(--white);
+  width: 100%;
+
+  padding: var(--size3);
+  display: flex;
+  flex-direction: column;
+}
+
+footer .customer_info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer .customer_info h1 {
+  text-align: center;
+}
+
+footer .customer_info .customer_service {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size1);
+}
+
+footer .customer_info .customer_service h1 {
+  font-size: var(--size2);
+}
+
+footer .customer_info address {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size);
+}
+
+footer .customer_info address h1 {
+  font-size: var(--size2);
+}
+
+footer .customer_info address p {
+  font-weight: 300;
+}
+
+footer .customer_info .social_media {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size);
+}
+
+footer .customer_info .social_media h1 {
+  font-size: var(--size2);
+}
+
+footer .customer_info .social_media .social_media_logos {
+  display: flex;
+  gap: var(--size1);
+}
+
+footer .customer_info .social_media a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--size5);
+  height: 2rem;
+}
+
+footer .customer_info .social_media img {
+  width: 2rem;
+  height: 100%;
+}
+footer .customer_info .social_media a:nth-child(2) img {
+  width: 4rem;
+}
+
+footer .company_policy {
+  width: 90%;
+  margin: 0 auto;
+  padding: var(--size2);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--size4);
+  margin-top: var(--size2);
+  background-color: #053044;
+}
+
+footer .company_policy .policies {
+  display: flex;
+  gap: var(--size2);
+}
+
+footer .company_policy a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer .company_policy .policies a:hover {
+  color: var(--fourth-gray);
+}
+@media screen and (max-width: 48rem) {
+  footer .customer_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--size2);
+  }
+
+  footer .customer_info h1 {
+    text-align: left;
+  }
+
+  footer .company_policy {
+    width: 100%;
+    gap: var(--size1);
+  }
+  footer .company_policy .policies {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 25rem) {
+  footer .customer_info {
+    display: flex;
+    flex-direction: column;
+  }
+}

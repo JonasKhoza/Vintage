@@ -1,0 +1,165 @@
+.all_products_h1 {
+  font-family: "KANIT", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.all_products_h1 span {
+  color: var(--blue1);
+}
+
+.btn {
+  width: fit-content;
+  padding: 1rem 1rem;
+  color: var(--sixth-gray);
+  background-color: var(--blue1);
+  font: 500;
+  font-size: 1.3rem;
+  border-radius: 3px;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: darkorange;
+  color: #fff;
+}
+
+.all_products_h2 {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  font-family: 700;
+  font-size: 2rem;
+  color: rgb(31, 30, 30);
+  margin: 1.5rem 0;
+}
+
+.update_product_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.update_product_cont .update_product_h1 {
+  font-family: "KANIT", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--blue1);
+}
+
+.products_grid {
+  padding: 6px;
+  margin-top: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(14.5rem, 1fr));
+  gap: 2rem;
+  list-style: none;
+}
+.product_details {
+  padding: 0;
+  margin: 0;
+  width: 18rem;
+  height: 30rem;
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  border: 2px solid rgb(211, 210, 210);
+  box-shadow: 5px 5px 5px rgb(211, 210, 210) inset;
+}
+
+.product_details .img_cont {
+  width: inherit;
+  height: 18rem;
+}
+.product_details img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.product_item_content {
+  border-top: 1px solid rgb(211, 210, 210);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  height: 12rem;
+  background-color: transparent;
+}
+.product_item_content h2 {
+  font-size: 1rem;
+  margin: 2rem 0;
+  color: rgb(31, 30, 30);
+}
+.product_items_actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(63, 62, 62);
+}
+/* or whatever you like 
+  <div style="width: 100%; background-color: red;">
+      <button type="button">A</button>
+      <button type="button">B</button>
+      <button type="button">C</button>
+      <button type="button">D</button>
+      <button type="button">E</button>
+  </div>
+  div {
+    display: flex;
+    justify-content: space-around;
+  }
+  button {
+    width: 100%;
+    margin: 5px;  or whatever you like 
+  }
+  
+  */
+.edit {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 8rem;
+  padding: 8px 0;
+  color: rgb(51, 51, 51);
+  background-color: transparent;
+  text-decoration: none;
+  border: 1px solid rgb(172, 171, 171);
+  border-radius: 4px;
+}
+.edit:hover {
+  color: darkorange;
+  cursor: pointer;
+}
+
+/* .product-details h2 {
+    font: 700;
+    color: var(--white);
+    margin: 1rem 0;
+  } */
+
+/* bELOW 1150px IS A PROBLEM*/
+@media screen and (max-width: 850px) {
+  .products_grid {
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 705px) {
+  .products_grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

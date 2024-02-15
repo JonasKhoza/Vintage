@@ -1,0 +1,130 @@
+.ordered_list {
+  list-style: none;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.order_Item {
+  width: inherit;
+  background-color: var(--five-gray);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 3px 3px 3px darkorange inset;
+}
+
+.order_Item .order_summary {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+.order_Item .order_summary h2 {
+  display: flex;
+  justify-content: space-around;
+  font-weight: lighter;
+  text-align: left;
+  font-size: 1.2rem;
+  color: var(--first-gray);
+}
+.order_Item .order_item_summary {
+  color: var(--primary-gray2);
+}
+
+.order_Item .badge {
+  font-size: 1.2rem;
+  background-color: var(--primary-gray4);
+  padding: 0.5rem 0.8rem;
+  border-radius: 30%;
+  color: var(--blue1);
+}
+
+.order_Item .order_details {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.order_Item .order_details address {
+  font-family: "Roboto", "sans-serif";
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.2rem;
+  color: darkorange;
+  margin-bottom: 10px;
+}
+.order_Item .order_details address p {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.order_Item .order_details address a {
+  color: darkorange;
+}
+
+.order_Item .order_details ul {
+  list-style: square;
+  color: var(--first-gray);
+}
+.order_Item .order_actions form {
+  display: flex;
+  gap: 1rem;
+  background-color: transparent;
+}
+
+.order_Item .order_actions form select {
+  font: inherit;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 0 3px;
+  background-color: var(--first-gray);
+}
+
+.order_Item .order_actions form select:hover {
+  cursor: pointer;
+}
+
+.btn {
+  width: fit-content;
+  text-align: center;
+  padding: 0.5rem 1.3rem;
+  color: var(--sixth-gray);
+  background-color: var(--blue1);
+  font: 500;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--white);
+  background-color: darkorange;
+}
+
+@media screen and (max-width: 705px) {
+  .order_Item .order_summary {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .order_Item .order_summary {
+    margin-bottom: 5rem;
+  }
+  .order_Item .order_actions form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .order_Item .order_actions form select {
+    padding: 0.5rem 0;
+  }
+}

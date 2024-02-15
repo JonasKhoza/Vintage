@@ -1,0 +1,144 @@
+.slideshow {
+  margin: 0 auto;
+  margin-top: 2rem;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  border-bottom-left-radius: 100px;
+  background-color: yellow;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  min-height: 400px;
+  width: 100%;
+  display: inline-block;
+  position: "relative";
+  background-color: purple;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroText {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: red;
+}
+
+.navigation_container {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: var(--size-3);
+  position: absolute;
+  top: 300px;
+  left: 10px;
+  z-index: 1;
+}
+
+.navigation_container .prev_next {
+  font-size: 2.5rem;
+  color: var(--colors-14);
+  cursor: pointer;
+}
+
+.navigation_container .prev_next.disable {
+  color: gray;
+  opacity: 0.3;
+  cursor: text;
+}
+
+.slideshowDots {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slideshowDot {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 7px;
+  background-color: #c4c4c4;
+}
+
+.slideshowDot.active {
+  background-color: #6a0dad;
+}
+
+@media screen and (max-width: 70rem) {
+  .slideshow {
+    margin-top: 1rem;
+    border-bottom-left-radius: 0;
+  }
+
+  .slide {
+    min-height: 200px;
+  }
+
+  .navigation_container {
+    background-color: rgb(252, 251, 251);
+    top: 150px;
+    left: 0;
+    padding: 5px 16px 5px 16px;
+    margin-left: 0.8rem;
+    border-radius: 20px;
+  }
+
+  .navigation_container .prev_next {
+    font-size: 1.8rem;
+  }
+
+  .slideshowDot {
+    height: 8px;
+    width: 8px;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .slideshow {
+    padding-bottom: 40px;
+  }
+
+  .slide {
+    min-height: 100px;
+  }
+
+  .navigation_container {
+    width: 100%;
+    margin-left: var(--size-3);
+    top: 110px;
+  }
+
+  .navigation_container {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+}

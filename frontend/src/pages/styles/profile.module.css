@@ -1,0 +1,114 @@
+.profile {
+  width: 100%;
+  padding: var(--size);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size3);
+}
+
+.profile .heading {
+  color: var(--fourth-gray);
+  text-align: center;
+  font-weight: 800;
+  font-size: var(--size5);
+}
+
+.profile .profile_content {
+  display: flex;
+  justify-content: center;
+  gap: var(--size3);
+}
+
+.profile .customer_profile {
+  width: 35rem;
+
+  box-shadow: 2px 3px 3px 2px var(--second-gray);
+}
+
+.profile .customer_profile h1 {
+  background-color: var(--blue1);
+  color: var(--fourth-gray);
+  text-align: center;
+  font-weight: 900;
+  font-size: var(--size7);
+  padding: var(--size1) 0;
+  border-radius: 4px;
+}
+
+.profile .customer_profile p {
+  text-align: center;
+  font-size: var(--favorite);
+  padding: var(--size) 0;
+}
+
+.profile .customer_profile p span {
+  font-size: 1.1rem;
+  background-color: #dafcfc;
+  padding: 0 10px;
+}
+
+.profile .customer_profile .customer_profile_actions {
+  margin: var(--size7) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size1);
+}
+
+.profile .customer_profile .customer_profile_actions button {
+  text-align: left;
+  background-color: rgb(250, 250, 250);
+  padding: var(--size1) var(--size);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile .customer_profile .customer_profile_actions button.active {
+  background-color: #dafcfc;
+}
+
+.profile .customer_profile .customer_profile_actions button:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.profile .customer_profile .customer_profile_actions button:last-child span {
+  background-color: darkorange;
+  color: var(--white);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: var(--size1);
+
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 62.5rem) {
+  .profile .profile_content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .profile .customer_profile {
+    margin: 0 auto;
+  }
+
+  .profile .customer_profile h1 {
+    font-size: var(--size5);
+  }
+
+  .profile .profile_content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  .profile .customer_profile {
+    width: 90%;
+  }
+}
