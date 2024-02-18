@@ -48,7 +48,8 @@ function getAllProductsForAdmin(req, res) {
             });
         }
         try {
-            const products = yield product_model_1.default.find().sort({ createdAt: -1 });
+            const products = yield product_model_1.default.find().sort({ id: -1 });
+            console.log(products);
             return res.status(201).json({ products });
         }
         catch (err) {

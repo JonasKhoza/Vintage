@@ -1,6 +1,6 @@
 import session from "express-session";
 import connectMongoDBSession from "connect-mongodb-session";
-import { CartInterface, CartSessionInterface } from "../models/cart.model";
+import { CartSessionInterface } from "../models/cart.model";
 interface CustomSessionData {
   uid: string; // or whatever type is appropriate for your user ID
   cart: CartSessionInterface | null;
@@ -13,7 +13,7 @@ declare module "express-session" {
 const MongoDBStore = connectMongoDBSession(session);
 
 export const sessionStore = new MongoDBStore({
-  uri: `mongodb+srv://jonaskhoza18:MJSJ2Q6ldLDGImm7@cluster3.0ai6z9x.mongodb.net/onestore`,
+  uri: process.env.DB_HOST!,
   databaseName: "onestore",
   collection: "sessions",
 });
@@ -24,7 +24,7 @@ sessionStore.on("error", (error: any) => {
 
 export const sessionConfigHandler = (store: any) => {
   return {
-    secret: process.env.SESSION_SECRET_KEY! || "my-secret-key", // Replace 'your-secret-key' with your actual secret key
+    secret: process.env.SESSION_SECRET_KEY! || "my-secret-key",
     resave: false, //prevents resaving of unchanged sessions
     saveUninitialized: false, //ensures saving only when there's some data change in it
     store: store, //where the session data is actually stored

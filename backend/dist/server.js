@@ -8,6 +8,7 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const express_session_1 = __importDefault(require("express-session"));
+require("dotenv").config();
 //My files imports
 const users_routes_1 = __importDefault(require("./routes/users.routes"));
 const base_routes_1 = __importDefault(require("./routes/base.routes"));
@@ -31,7 +32,7 @@ const app = (0, express_1.default)();
 //   })
 // );
 app.use((0, cors_1.default)({
-    origin: "http://localhost:3000", // Replace with the origin of your frontend application
+    origin: "http://localhost:3000", // Replace with the origin of the frontend application
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"], // Specify the allowed HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Specify the allowed headers

@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import session from "express-session";
+require("dotenv").config();
 
 //My files imports
 import userRoutes from "./routes/users.routes";
@@ -32,7 +33,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // Replace with the origin of your frontend application
+    origin: "http://localhost:3000", // Replace with the origin of the frontend application
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"], // Specify the allowed HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Specify the allowed headers

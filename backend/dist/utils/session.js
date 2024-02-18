@@ -8,7 +8,7 @@ const express_session_1 = __importDefault(require("express-session"));
 const connect_mongodb_session_1 = __importDefault(require("connect-mongodb-session"));
 const MongoDBStore = (0, connect_mongodb_session_1.default)(express_session_1.default);
 exports.sessionStore = new MongoDBStore({
-    uri: `mongodb+srv://jonaskhoza18:MJSJ2Q6ldLDGImm7@cluster3.0ai6z9x.mongodb.net/onestore`,
+    uri: process.env.DB_HOST,
     databaseName: "onestore",
     collection: "sessions",
 });
@@ -17,7 +17,7 @@ exports.sessionStore.on("error", (error) => {
 });
 const sessionConfigHandler = (store) => {
     return {
-        secret: process.env.SESSION_SECRET_KEY || "my-secret-key", // Replace 'your-secret-key' with your actual secret key
+        secret: process.env.SESSION_SECRET_KEY || "my-secret-key",
         resave: false, //prevents resaving of unchanged sessions
         saveUninitialized: false, //ensures saving only when there's some data change in it
         store: store, //where the session data is actually stored

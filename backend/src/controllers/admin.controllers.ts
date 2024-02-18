@@ -19,7 +19,8 @@ async function getAllProductsForAdmin(req: CustomRequest, res: Response) {
   }
 
   try {
-    const products = await Product.find().sort({ createdAt: -1 });
+    const products = await Product.find().sort({ id: -1 });
+    console.log(products);
 
     return res.status(201).json({ products });
   } catch (err) {
